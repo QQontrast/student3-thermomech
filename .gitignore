@@ -1,0 +1,14 @@
+[0-9]*/
+processor*/
+postProcessing/
+dynamicCode/
+log.*
+*.vtk
+*.foam
+!0/
+__pycache__/
+*.pyc
+out/*/fields/
+out/*/*.npz
+thermal_input/*/*.npz
+!cases/*/
