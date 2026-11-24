@@ -1,0 +1,2 @@
+FoamFile{version 2.0; format ascii; class dictionary; object setExprFieldsDict;}
+expressions ( T { field T; expression "100*log(0.291/mag(pos()))/log(0.291/0.275)"; } );

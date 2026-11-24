@@ -1,0 +1,4 @@
+FoamFile{version 2.0; format ascii; class volVectorField; object D;}
+dimensions [0 1 0 0 0 0 0];
+internalField uniform (0 0 0);
+boundaryField{bore{type tractionDisplacement;traction uniform (0 0 0);pressure uniform 0;value uniform (0 0 0);}outer{type tractionDisplacement;traction uniform (0 0 0);pressure uniform 0;value uniform (0 0 0);}phi0{type symmetryPlane;}phi90{type symmetryPlane;}frontAndBack{type empty;}}

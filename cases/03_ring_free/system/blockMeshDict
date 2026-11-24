@@ -1,0 +1,6 @@
+FoamFile{version 2.0; format ascii; class dictionary; object blockMeshDict;}
+scale 1;
+vertices ((0.275 0 0)(0.291 0 0)(0 0.291 0)(0 0.275 0)(0.275 0 0.001)(0.291 0 0.001)(0 0.291 0.001)(0 0.275 0.001));
+blocks (hex (0 1 2 3 4 5 6 7) (24 96 1) simpleGrading (3 1 1));
+edges (arc 1 2 (0.2057681 0.2057681 0) arc 0 3 (0.1944544 0.1944544 0) arc 5 6 (0.2057681 0.2057681 0.001) arc 4 7 (0.1944544 0.1944544 0.001));
+boundary (bore{type patch;faces ((0 4 7 3));} outer{type patch;faces ((1 2 6 5));} phi0{type symmetryPlane;faces ((0 1 5 4));} phi90{type symmetryPlane;faces ((3 7 6 2));} frontAndBack{type empty;faces ((0 3 2 1)(4 5 6 7));});

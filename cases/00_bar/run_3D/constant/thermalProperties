@@ -1,0 +1,5 @@
+FoamFile{version 2.0; format ascii; class dictionary; object thermalProperties;}
+C{type uniform;value 470;}
+k{type uniform;value 1e-12;}
+alpha{type uniform;value 12e-6;}
+thermalStress yes;

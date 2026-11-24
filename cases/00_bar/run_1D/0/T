@@ -1,0 +1,4 @@
+FoamFile{version 2.0; format ascii; class volScalarField; object T;}
+dimensions [0 0 0 1 0 0 0];
+internalField uniform 100;
+boundaryField{x0{type symmetryPlane;}x1{type symmetryPlane;}y0{type symmetryPlane;}y1{type zeroGradient;}z0{type symmetryPlane;}z1{type zeroGradient;}}
