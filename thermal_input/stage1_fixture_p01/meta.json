@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "source": "fixture",
+  "thermal_source": "fixture",
+  "generator": "FIP-1.0/thermal/make_thermal_ref.py",
+  "case_id": "P01",
+  "grid_id": "G-P01",
+  "frame": "plate_v1",
+  "units": "SI",
+  "grid_points": 72900,
+  "n_times": 71,
+  "T_ref_K": 423.15,
+  "ambient_K": 293.15,
+  "preheat_K": 423.15,
+  "cap_K_above_preheat": 1584.0,
+  "tau_cool_s": 0.5,
+  "t_off_s": 2.0,
+  "symmetry_factor": 2.0,
+  "WARNING": "analytic fixture for interface testing only, NOT physics; engineering conclusions forbidden on this data"
+}

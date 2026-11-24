@@ -1,0 +1,4 @@
+CE_IIW = 0.6283   Ms_Andrews = 321.9 degC
+T_peak =   900.0 K -> f_M = 0.000  HV = 207
+T_peak =  1053.2 K -> f_M = 0.964  HV = 616
+T_peak =  1200.0 K -> f_M = 0.964  HV = 616

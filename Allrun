@@ -1,0 +1,24 @@
+#!/bin/bash
+cd "$(dirname "$0")" || exit 1
+mkdir -p results
+echo "== FIP integrity =="
+python3 FIP-1.0/check/verify_fip.py > results/fip_verify.log 2>&1
+tail -1 results/fip_verify.log
+echo "== slot stage1 from FIP (as-is, out into OUR slot) =="
+python3 FIP-1.0/thermal/make_thermal_ref.py R01 --out thermal_input/stage1_fixture
+python3 FIP-1.0/thermal/make_thermal_ref.py P01 --out thermal_input/stage1_fixture_p01
+echo "== A1: bar 1D/2D/3D =="
+python3 scripts/make_bar_cases.py
+bash cases/00_bar/Allrun
+echo "== A2-A4 =="
+python3 scripts/make_verif_cases.py
+bash cases/01_bending/Allrun
+bash cases/02_ring_gradient/Allrun
+bash cases/03_ring_free/Allrun
+echo "== A5 / C17 / km =="
+python3 scripts/check_mapping.py
+python3 scripts/ovality.py
+python3 scripts/km.py > results/km.txt
+echo "== tables =="
+python3 scripts/make_report_tables.py
+echo "DONE -> results/verification_table.md"

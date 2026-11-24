@@ -1,0 +1,21 @@
+== FIP integrity ==
+FIP RESULT: OK
+== slot stage1 from FIP (as-is, out into OUR slot) ==
+R01 fixture: (66, 37800) T range 293.2..2007.2 K final max 294.17 K
+P01 fixture: (71, 72900) T range 293.1..2007.2 K final max 293.15 K
+== A1: bar 1D/2D/3D ==
+1D expected MPa = (-252, 0, 0)
+2D expected MPa = (-360, -360, 0)
+3D expected MPa = (-630, -630, -630)
+== A2-A4 ==
+built 01_bending, 02_ring_gradient, 03_ring_free
+== A5 / C17 / km ==
+t=   0.0 s | forward@nodes=1.68e-03 K | rel_max=0.6556 rel_int=0.0043 | worst r=0.2755 phi=0.0 z=0.020 T_in=2007.2 T_back=883.4
+t=   7.0 s | forward@nodes=1.99e-03 K | rel_max=0.2773 rel_int=0.0019 | worst r=0.2750 phi=15.0 z=0.020 T_in=573.8 T_back=496.0
+t=  30.0 s | forward@nodes=9.34e-03 K | rel_max=0.6471 rel_int=0.0042 | worst r=0.2755 phi=30.0 z=0.020 T_in=1211.5 T_back=617.3
+t= 200.0 s | forward@nodes=1.04e-05 K | rel_max=0.6471 rel_int=0.0043 | worst r=0.2755 phi=30.0 z=0.020 T_in=294.2 T_back=293.5
+saved results/fig_mapping_error_R01.png ; integral <=0.02: PASS
+unit test ovality: 1.200e-04 expected 1.200e-04 -> PASS
+== tables ==
+wrote results/verification_table.md
+DONE -> results/verification_table.md

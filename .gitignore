@@ -11,4 +11,4 @@ __pycache__/
 out/*/fields/
 out/*/*.npz
 thermal_input/*/*.npz
-!cases/*/
+!cases/*/results/*.npy
